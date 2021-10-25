@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3BDDVE5YD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V3BDDVE5YD');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Denny's Choice</title>
+    <meta
+      name="description"
+      content="Does PEI have decent mental health services?"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      body {
+        background-color: #4a3fa8;
+        font-size: 19px;
+        color: #ededed;
+        font-family: sans-serif;
+      }
+      .y {
+        flex-basis: 200px;
+        flex-grow: 1;
+        padding: 10px;
+        text-align: center;
+      }
+      .m {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+      .i {
+        font-weight: bold;
+        margin-right: 5px;
+        font-size: 24px;
+      }
+      .t {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 40px;
+      }
+      .c- {
+        font-weight: bold;
+        font-size: 100px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .h {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      @media only screen and (max-width: 600px) {
+        .c- {
+          font-size: 60px;
+        }
+      }
+      a {
+        color: #ededed;
+        font-size: 15px;
+      }
+      .c {
+        margin: 30px auto;
+        max-width: 800px;
+        padding: 0 3%;
+      }
+    </style>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dennyschoice.ca" />
+    <meta
+      property="og:title"
+      content="Does PEI have decent mental health services?"
+    />
+    <meta
+      property="og:description"
+      content="No, PEI does not have decent mental health services"
+    />
+    <meta
+      property="og:image"
+      content="https://dennyschoice.ca/mental-health.png"
+    />
+    <meta property="twitter:url" content="https://dennyschoice.ca" />
+    <meta
+      property="twitter:title"
+      content="Does PEI have decent mental health services?"
+    />
+    <meta
+      property="twitter:description"
+      content="No, PEI does not have decent mental health services"
+    />
+    <meta
+      property="twitter:image"
+      content="https://dennyschoice.ca/mental-health.png"
+    />
+  </head>
+  <body>
+    <div class="c">
+      <p class="m">Does PEI have decent mental health services?</p>
+      <p class="c-">No</p>
+      <div class="h">
+        <div class="y">
+          <span id="liberals-2017" class="i"></span>
+          <small>days since</small><br />
+          Liberals promised new mental health campus
+          <a
+            href="https://www.princeedwardisland.ca/en/news/mental-health-and-addictions-campus-planning-begins"
+            target="blank"
+            rel="noopener noreferrer"
+            >princedwardisland.ca</a
+          >
+        </div>
+        <div class="y">
+          <span id="liberals-2018" class="i"></span>
+          <small>days since</small><br />
+          mobile mental health units were promised
+          <a
+            href="https://www.theguardian.pe.ca/news/local/pei-signs-20m-deal-with-feds-for-mobile-mental-health-crisis-program-188670/"
+            target="blank"
+            rel="noopener noreferrer"
+            >The Guardian</a
+          >
+        </div>
+        <div class="y">
+          <span id="pc-2019" class="i"></span>
+          <small>days since</small><br />
+          PCs promised new mental health campus
+          <a
+            href="https://www.cbc.ca/news/canada/prince-edward-island/pei-pc-health-care-policy-1.5075309"
+            target="blank"
+            rel="noopener noreferrer"
+            >CBC</a
+          >
+        </div>
+      </div>
+      <div class="t">
+        <a
+          href="https://www.princeedwardisland.ca/en/information/health-pei/mental-health-services"
+          target="blank"
+          rel="noopener noreferrer"
+        >Currrent Services</a>
+      </div>
+      <div class="t">
+        Share on
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https://dennyschoice.ca"
+          target="blank"
+          rel="noopener noreferrer"
+          >Facebook</a
+        >
+        and
+        <a
+          href="https://twitter.com/intent/tweet?url=https://dennyschoice.ca&text="
+          target="blank"
+          rel="noopener noreferrer"
+          >Twitter</a
+        >
+      </div>
+    </div>
+    <script>
+      var liberals2017 = document.getElementById("liberals-2017");
+      var liberals2018 = document.getElementById("liberals-2018");
+      var pc2019 = document.getElementById("pc-2019");
+      var daysSince = function (pastDate) {
+        var now = new Date();
+        var then = new Date(pastDate);
+        var diff = now.getTime() - then.getTime();
+        return Math.floor(diff / 86400000);
+      };
+
+      var l2017days = daysSince("11/22/2017");
+      var l2018days = daysSince("02/23/2018");
+      var pc2019days = daysSince("03/27/2019");
+
+      var countUp = function (obj, start, end, duration) {
+        var range = end - start;
+        var current = start;
+        var increment = end > start ? 1 : -1;
+        var stepTime = Math.abs(Math.floor(duration / range));
+        var timer = setInterval(function () {
+          current += increment;
+          obj.innerText = current;
+          if (current == end) {
+            clearInterval(timer);
+          }
+        }, stepTime);
+      };
+      countUp(liberals2017, 0, l2017days, 5000);
+      countUp(liberals2018, 0, l2018days, 3000);
+      countUp(pc2019, 0, pc2019days, 2000);
+    </script>
+  </body>
+</html>
